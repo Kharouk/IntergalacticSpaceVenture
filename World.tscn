@@ -14,9 +14,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ship" parent="." instance=ExtResource( 1 )]
-position = Vector2( 30, 90 )
-
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 279.889, 40.3521 )
 
@@ -28,3 +25,7 @@ position = Vector2( 232.454, 90 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 265.294, 104.166 )
+
+[node name="Ship" parent="." instance=ExtResource( 1 )]
+position = Vector2( 30, 90 )
+z_index = 1
