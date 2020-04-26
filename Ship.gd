@@ -7,12 +7,12 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.is_action_pressed("ui_left"):
-		sprite.flip_h = true
-		position.x -= SPEED * delta
-	if Input.is_action_pressed("ui_right"):
-		sprite.flip_h = false
-		position.x += SPEED * delta
+#	if Input.is_action_pressed("ui_left"):
+#		sprite.flip_h = true
+#		position.x -= SPEED * delta
+#	if Input.is_action_pressed("ui_right"):
+#		sprite.flip_h = false
+#		position.x += SPEED * delta
 	if Input.is_action_pressed("ui_up"):
 		position.y -= SPEED * delta
 	if Input.is_action_pressed("ui_down"):
