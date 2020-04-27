@@ -32,3 +32,9 @@ func fire_bullet():
 	# setting the bullet's position (globally just in case it's attached to another scene) to the ship's global position 
 	var ship_position = global_position
 	iBullet.global_position = ship_position
+	
+
+
+func _on_Ship_area_entered(area):
+	area.queue_free()
+	queue_free()
