@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Signal_in_Code.gd" type="Script" id=1]
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 92.7739
+margin_top = 80.2774
+margin_right = 227.774
+margin_bottom = 94.2774
+text = "You can't change me."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 121.219
+margin_top = 112.065
+margin_right = 199.219
+margin_bottom = 132.065
+text = "CHANGE"
