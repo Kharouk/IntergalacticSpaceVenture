@@ -4,17 +4,18 @@ const ExplosionEffect = preload("res://ExplosionEffect.tscn")
 
 export(int) var SPEED = 20
 export(int) var HEALTH = 3
-
+var world = null
 signal score_up
 
 func _ready():
-	var world = get_tree().current_scene 
+	world = get_tree().current_scene 
 	if world.is_in_group("GameWorld"): # could also search based on classname or using load()
 		connect("score_up", world, "_on_Enemy_score_up")
 
 func _process(delta):
+	if world.get_score() >= 50:
+		position.x -= (SPEED * 2) * delta
 	position.x -= SPEED * delta
-
 
 func _on_Enemy_body_entered(body):
 	body.queue_free()

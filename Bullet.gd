@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-
 func _ready():
+	var world = get_tree().current_scene
 	pass
 
 

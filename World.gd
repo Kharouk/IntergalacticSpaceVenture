@@ -1,10 +1,13 @@
 extends Node
 class_name GameWorld
 
-var score = 0 setget set_score
+var score = 0 setget set_score, get_score
 var score_text = "Score = %s"
 
 onready var scoreLabel := $Score
+
+func get_score():
+	return score
 
 # no matter where we call score, it runs this function:
 func set_score(value):
