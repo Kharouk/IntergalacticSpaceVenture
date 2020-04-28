@@ -1,0 +1,30 @@
+[gd_scene format=2]
+
+[node name="EnemySpawner" type="Node2D"]
+position = Vector2( 320, 0 )
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnA" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 21 )
+
+[node name="SpawnB" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 40 )
+
+[node name="SpawnC" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 60 )
+
+[node name="SpawnD" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 80 )
+
+[node name="SpawnE" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 100 )
+
+[node name="SpawnF" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 120 )
+
+[node name="SpawnG" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 140 )
+
+[node name="SpawnH" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0, 160 )

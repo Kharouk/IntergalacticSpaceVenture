@@ -11,4 +11,7 @@ texture = ExtResource( 2 )
 
 [node name="Collision" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -5, -2, 1, -7, 3, -7, 5, -5, 5, 5, 3, 7, 1, 7, -5, 2 )
+
+[node name="Visibiity" type="VisibilityNotifier2D" parent="."]
 [connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
+[connection signal="screen_exited" from="Visibiity" to="." method="_on_Visibiity_screen_exited"]

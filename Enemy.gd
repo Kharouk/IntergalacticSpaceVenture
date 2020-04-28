@@ -13,3 +13,7 @@ func _on_Enemy_body_entered(body):
 	if HEALTH <= 0:
 		queue_free()
 
+
+
+func _on_Visibiity_screen_exited():
+	queue_free()
