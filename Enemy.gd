@@ -5,6 +5,12 @@ const ExplosionEffect = preload("res://ExplosionEffect.tscn")
 export(int) var SPEED = 20
 export(int) var HEALTH = 3
 
+signal score_up
+
+func _ready():
+	var world = get_tree().current_scene
+	connect("score_up", world, "_on_Enemy_score_up")
+
 func _process(delta):
 	position.x -= SPEED * delta
 
@@ -13,6 +19,7 @@ func _on_Enemy_body_entered(body):
 	body.queue_free()
 	HEALTH -= 1
 	if HEALTH <= 0:
+		emit_signal("score_up")
 		queue_free()
 
 func _on_Visibiity_screen_exited():
