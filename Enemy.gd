@@ -8,8 +8,9 @@ export(int) var HEALTH = 3
 signal score_up
 
 func _ready():
-	var world = get_tree().current_scene
-	connect("score_up", world, "_on_Enemy_score_up")
+	var world = get_tree().current_scene 
+	if world.is_in_group("GameWorld"): # could also search based on classname or using load()
+		connect("score_up", world, "_on_Enemy_score_up")
 
 func _process(delta):
 	position.x -= SPEED * delta
