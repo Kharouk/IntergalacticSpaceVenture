@@ -7,9 +7,6 @@ onready var bulletSound = $BulletSound
 func _ready():
 	bulletSound.play()
 
-func _exit_tree():
-	create_hit_effect()
-
 func _on_Visibility_screen_exited():
 	queue_free()
 
