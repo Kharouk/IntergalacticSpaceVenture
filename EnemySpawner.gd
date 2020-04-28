@@ -23,7 +23,7 @@ func spawn_enemy():
 
 func _on_Timer_timeout():
 	world = get_tree().current_scene
-	print(timer.wait_time)
+	
 	if world.is_in_group("GameWorld"):
 		if world.get_score() >= 150:
 			timer.wait_time = 0.4
