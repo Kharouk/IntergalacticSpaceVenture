@@ -1,6 +1,7 @@
 extends Area2D
 
 const Bullet = preload("res://Bullet.tscn")
+const ExplosionEffect = preload("res://ExplosionEffect.tscn")
 
 export(int) var SPEED = 100
 onready var sprite := $Sprite
@@ -26,8 +27,12 @@ func fire_bullet():
 	# setting the bullet's position (globally just in case it's attached to another scene) to the ship's global position 
 	var ship_position = global_position
 	iBullet.global_position = ship_position
-	
 
+func _exit_tree():
+	var main = get_tree().current_scene
+	var explosition_effect = ExplosionEffect.instance()
+	main.add_child(explosition_effect)
+	explosition_effect.global_position = global_position
 
 func _on_Ship_area_entered(area):
 	area.queue_free()
