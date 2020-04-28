@@ -17,3 +17,13 @@ func _on_Enemy_body_entered(body):
 
 func _on_Visibiity_screen_exited():
 	queue_free()
+
+# This built in function runs when enemy node leaves the scene
+func _exit_tree():
+	# Gets main node:
+	var main = get_tree().current_scene
+	var explosion_effect = ExplosionEffect.instance()
+	main.add_child(explosion_effect)
+	# set the position of the explosion to the global position of the Enemy
+	explosion_effect.global_position = global_position
+	
