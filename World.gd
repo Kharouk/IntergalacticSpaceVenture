@@ -15,4 +15,5 @@ func set_score(value):
 	scoreLabel.text = score_text % score
 
 func _on_Enemy_score_up():
+	# Have to add self as it might confuse itself since the setter could go into an infinite loop
 	self.score += 10
