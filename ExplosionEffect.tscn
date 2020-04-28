@@ -41,7 +41,7 @@ hframes = 6
 autoplay = "Explode"
 anims/Explode = SubResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="ExplosionSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -20.0
 autoplay = true
