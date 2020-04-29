@@ -17,3 +17,4 @@ position = Vector2( 4.76837e-07, 4.17233e-07 )
 scale = Vector2( 0.6, 0.8 )
 [connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
 [connection signal="screen_exited" from="Visibiity" to="." method="_on_Visibiity_screen_exited"]
+[connection signal="viewport_exited" from="Visibiity" to="." method="_on_Visibiity_viewport_exited"]
