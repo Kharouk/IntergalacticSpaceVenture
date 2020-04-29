@@ -39,9 +39,14 @@ func _on_Visibiity_screen_exited():
 	
 func create_explosion():
 	# Gets main node:
-	var main = get_tree().current_scene
+	var world = get_tree().current_scene
 	var explosion_effect = ExplosionEffect.instance()
-	main.add_child(explosion_effect)
+	world.add_child(explosion_effect)
 	# set the position of the explosion to the global position of the Enemy
 	explosion_effect.global_position = global_position
-	
+
+
+
+func _on_Visibiity_viewport_exited(viewport):
+	# look into deducting score if an enemy gets passed!
+	pass # Replace with function body.

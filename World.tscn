@@ -5,18 +5,7 @@
 [ext_resource path="res://EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World.gd" type="Script" id=4]
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=5]
-
-[sub_resource type="ParticlesMaterial" id=1]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 90, 1 )
-flag_disable_z = true
-direction = Vector3( -1, 0, 0 )
-spread = 0.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 100.0
-initial_velocity_random = 0.5
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
+[ext_resource path="res://Stars.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node" groups=[
 "GameWorld",
@@ -32,12 +21,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Stars" type="Particles2D" parent="."]
-position = Vector2( 320, 90 )
-amount = 200
-lifetime = 7.0
-preprocess = 7.0
-process_material = SubResource( 1 )
+[node name="Stars" parent="." instance=ExtResource( 6 )]
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 279.889, 40 )

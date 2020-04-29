@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Stars.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ColorRect.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -12,6 +14,7 @@ anchor_bottom = 1.0
 margin_top = -0.237823
 margin_bottom = -0.237823
 color = Color( 0, 0, 0, 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,3 +34,6 @@ text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Stars" parent="." instance=ExtResource( 2 )]
+[connection signal="pressed" from="StartButton" to="ColorRect" method="_on_StartButton_pressed"]
