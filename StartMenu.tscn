@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Stars.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ColorRect.gd" type="Script" id=3]
-[ext_resource path="res://Music.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -37,8 +36,6 @@ __meta__ = {
 }
 
 [node name="Stars" parent="." instance=ExtResource( 2 )]
-
-[node name="Music" parent="." instance=ExtResource( 4 )]
 
 [node name="Title" type="Label" parent="."]
 margin_left = 72.4133
