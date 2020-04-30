@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Stars.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameOverScreen.gd" type="Script" id=3]
+
+[node name="GameOverScreen" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" parent="." instance=ExtResource( 2 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 94.122
+margin_top = 74.4869
+margin_right = 161.122
+margin_bottom = 85.4869
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 120.045
+margin_top = 106.118
+margin_right = 202.045
+margin_bottom = 117.118
+custom_fonts/font = ExtResource( 1 )
+text = "Highscore : 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 86.2737
+margin_top = 162.483
+margin_right = 233.274
+margin_bottom = 173.483
+custom_fonts/font = ExtResource( 1 )
+text = "Press X to Play Again"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

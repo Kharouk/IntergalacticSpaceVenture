@@ -24,6 +24,10 @@ config/name="Intergalactic Space Venture"
 run/main_scene="res://StartMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Music="*res://Music.tscn"
+
 [display]
 
 window/size/width=320

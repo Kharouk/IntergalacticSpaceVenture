@@ -6,6 +6,8 @@ const ExplosionEffect = preload("res://ExplosionEffect.tscn")
 export(int) var SPEED = 100
 onready var sprite := $Sprite
 
+signal player_death
+
 func _process(delta):
 	if Input.is_action_pressed("ui_up"):
 		position.y -= SPEED * delta
@@ -33,6 +35,7 @@ func _exit_tree():
 	var explosition_effect = ExplosionEffect.instance()
 	main.add_child(explosition_effect)
 	explosition_effect.global_position = global_position
+	emit_signal("player_death")
 
 func _on_Ship_area_entered(area):
 	area.queue_free()
