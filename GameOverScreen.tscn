@@ -18,7 +18,7 @@ __meta__ = {
 
 [node name="Stars" parent="." instance=ExtResource( 2 )]
 
-[node name="Label" type="Label" parent="."]
+[node name="GameOver" type="Label" parent="."]
 margin_left = 94.122
 margin_top = 74.4869
 margin_right = 161.122
@@ -32,7 +32,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
+[node name="HighScoreLabel" type="Label" parent="."]
 margin_left = 120.045
 margin_top = 106.118
 margin_right = 202.045
@@ -45,7 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="."]
+[node name="PlayAgain" type="Label" parent="."]
 margin_left = 86.2737
 margin_top = 162.483
 margin_right = 233.274
