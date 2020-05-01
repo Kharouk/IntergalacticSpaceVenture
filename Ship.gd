@@ -15,6 +15,8 @@ func _process(delta):
 		position.y += SPEED * delta
 	if Input.is_action_just_pressed("ui_shoot"):
 		fire_bullet()
+	if Input.is_key_pressed(KEY_S):
+		queue_free()
 	
 func fire_bullet():
 	var iBullet = Bullet.instance()

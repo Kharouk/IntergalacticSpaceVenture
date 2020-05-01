@@ -14,12 +14,19 @@ func set_score(value):
 	score = value
 	scoreLabel.text = score_text % score
 
+func update_save_data():
+	var save_data = SaveAndLoad.load_data_from_file()
+	if score > save_data.highscore:
+		save_data.highscore = score
+		SaveAndLoad.save_data_to_file(save_data)
+
 func _on_Enemy_score_up():
 	# Have to add self as it might confuse itself since the setter could go into an infinite loop
 	self.score += 10
 
 
 func _on_Ship_player_death():
+	update_save_data()
 	# Can quickly create a timer with the first argument
 	# Will yield until the "timeout" signal is emitted from the timer
 	yield(get_tree().create_timer(1), "timeout") # will break here to wait (like in other programming languages) -> waits a sec, oh got the timeout return, continue.
